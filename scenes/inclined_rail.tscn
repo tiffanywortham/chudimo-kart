@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://clb7iho58x1"]
+
+[ext_resource type="Texture2D" uid="uid://edx1alehqf2k" path="res://assets/inclined_rail.png" id="1_n16u3"]
+
+[node name="inclined_rail" type="Node2D" unique_id=1516246662]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=336525380]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1199082892]
+texture = ExtResource("1_n16u3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1682573356]
+polygon = PackedVector2Array(0, 0, 0, 0, 16, -16, 16, 16, -16, 16)

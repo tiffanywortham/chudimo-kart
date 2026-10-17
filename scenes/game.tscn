@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dgtq4766mgpbr"]
+
+[ext_resource type="Script" uid="uid://dris22jbe45dm" path="res://scenes/game.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://dftucktkrumq" path="res://scenes/character_body_2d.gd" id="2_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://mb2ng4nyik3l" path="res://assets/ice_block.png" id="2_yqjtg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(32, 32)
+
+[node name="Game" type="Node2D" unique_id=2084595039]
+script = ExtResource("1_lbhrr")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1174049565]
+position = Vector2(72, 24)
+script = ExtResource("2_lnu2h")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1262114249]
+position = Vector2(144, 64)
+texture = ExtResource("2_yqjtg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1255934855]
+position = Vector2(144, 64)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=178184915]
+visible = false
+position = Vector2(144, 64)
+zoom = Vector2(4, 4)
