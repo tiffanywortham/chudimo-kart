@@ -33,7 +33,8 @@ func _on_timer_timeout():
 			lastBlockLocation.y -= 32
 			
 		elif (spawn_inclined == 0):
-			lastBlockLocation.x += 32
+			var spaces = randi_range(1,4)
+			lastBlockLocation.x += 32 * spaces
 		else:
 			spawn_fr(Vector2(lastBlockLocation.x + 32, lastBlockLocation.y))
 			lastBlockLocation.x += 32
