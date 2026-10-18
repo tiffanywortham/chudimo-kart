@@ -38,6 +38,9 @@ func _on_timer_timeout():
 		else:
 			spawn_fr(Vector2(lastBlockLocation.x + 32, lastBlockLocation.y))
 			lastBlockLocation.x += 32
+			
+const JUMP_VELOCITY = -400.0
+const GRAVITY = 980.0
 
 func _ready():
 	var timer = Timer.new()
